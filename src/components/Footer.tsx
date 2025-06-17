@@ -125,14 +125,14 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-6 text-blue-200">Contato</h3>
             <ul className="space-y-4">
               {contactInfo.map((info, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                <li key={index} className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="w-5 h-5 text-blue-200" />
                   </div>
                   <div className="flex-1">
                     <button 
                       onClick={() => handleNavClick(info.href)}
-                      className="text-blue-100 hover:text-white transition-colors duration-300 break-words text-left"
+                      className="text-blue-100 hover:text-white transition-colors duration-300 break-words text-left w-full md:w-auto p-1 text-base"
                     >
                       {info.text}
                     </button>
@@ -144,13 +144,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Linha divisória */}
-        <div className="border-t border-blue-700 mt-16 pt-8">
+        <div className="border-t border-blue-700 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0 text-center md:text-left">
-              <p> 2024 Sobral Soluções Financeiras LTDA. Todos os direitos reservados.</p>
+              <p> 2025 Sobral Soluções Financeiras LTDA. Todos os direitos reservados.</p>
               <p className="mt-1">CNPJ: 24.963.609/0001-24</p>
             </div>
-            <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">
+            <div className="flex flex-row justify-center items-center space-x-4 md:space-x-6 mt-8">
               {legalLinks.map((link, index) => (
                 <button
                   key={index}
