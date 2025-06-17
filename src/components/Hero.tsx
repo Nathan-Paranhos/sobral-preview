@@ -7,12 +7,6 @@ const Hero: React.FC = () => {
     window.open('https://wa.me/5511942264710?text=Olá! Gostaria de simular uma garantia locatícia.', '_blank');
   };
 
-  const floatingElements = [
-    { icon: Shield, delay: 0, x: 20, y: 30 },
-    { icon: Zap, delay: 1, x: -30, y: 20 },
-    { icon: Star, delay: 2, x: 40, y: -20 },
-  ];
-
   return (
     <section className="pt-24 pb-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -20,29 +14,8 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:50px_50px]"></div>
       </div>
 
-      {/* Floating Elements */}
-      {floatingElements.map((element, index) => (
-        <motion.div
-          key={index}
-          className="absolute opacity-20"
-          style={{
-            left: `${20 + index * 25}%`,
-            top: `${30 + index * 15}%`,
-          }}
-          animate={{
-            y: [0, -20, 0],
-            rotate: [0, 5, -5, 0],
-          }}
-          transition={{
-            duration: 4 + element.delay,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: element.delay,
-          }}
-        >
-          <element.icon className="w-12 h-12 text-white" />
-        </motion.div>
-      ))}
+      {/* Visio Logo */}
+      <img src="/visio.png" alt="Visio Logo" className="w-64 h-64 mx-auto" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative pt-16">
         <div className="max-w-6xl mx-auto text-center">
