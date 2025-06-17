@@ -47,8 +47,7 @@ const Header: React.FC<HeaderProps> = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Logo />
-          // Added Visionaria logo image
-          <img src="/visionaria.png" alt="Visionaria Logo" className="w-10 h-10 rounded-full ml-4" />
+
           
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
