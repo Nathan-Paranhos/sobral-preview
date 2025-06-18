@@ -27,7 +27,7 @@ const Products: React.FC = () => {
       icon: Flame,
       title: 'Seguro Incêndio',
       subtitle: 'Proteção obrigatória e essencial para imóveis alugados',
-      description: 'Oferece cobertura completa contra incêndios, explosões, raios e fumaça. Protege tanto o patrimônio do proprietário quanto garante tranquilidade ao inquilino. Inclui assistência 10 horas e suporte especializado em sinistros.',
+      description: 'Oferece cobertura completa contra incêndios, explosões, raios e fumaça. Protege tanto o patrimônio do proprietário quanto garante tranquilidade ao inquilino. Inclui assistência 24 horas e suporte especializado em sinistros.',
       features: [
         'Cobertura contra incêndio e explosão',
         'Proteção contra raios e fumaça',

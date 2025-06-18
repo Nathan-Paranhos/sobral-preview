@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 interface HeaderProps {
   isDark?: boolean;
@@ -11,6 +12,8 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const menuItems = [
     {
@@ -29,12 +32,17 @@ const Header: React.FC<HeaderProps> = () => {
   ];
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
     setIsMenuOpen(false);
     setActiveSubmenu(null);
+
+    if (location.pathname !== '/') {
+      navigate('/' + href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -47,7 +55,6 @@ const Header: React.FC<HeaderProps> = () => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <Logo />
-
           
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -109,7 +116,7 @@ const Header: React.FC<HeaderProps> = () => {
             
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => { navigate('/'); setIsMenuOpen(false); }}
               className="lg:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-300"
             >
               {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}

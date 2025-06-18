@@ -35,14 +35,14 @@ const About: React.FC = () => {
     {
       name: 'Adiel Sobral',
       role: 'Advogado',
-      experience: '+17 anos',
+      experience: '+ 17 anos de experiência',
       description: 'Especialista em direito imobiliário e contratos de locação',
       image: '/adiel.jpg'
     },
     {
       name: 'Talita Sobral',
       role: 'Administradora',
-      experience: '+17 anos',
+      experience: '+ 17 anos no setor imobiliário',
       description: 'Especialista em gestão e relacionamento com clientes',
       image: '/talita.jpg'
     }

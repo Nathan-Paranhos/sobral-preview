@@ -10,7 +10,7 @@ const Logo: React.FC = () => {
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
       <motion.div
-        className="w-12 h-12 flex items-center justify-center overflow-hidden"
+        className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center overflow-hidden"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20 }}
@@ -29,8 +29,8 @@ const Logo: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.6 }}
       >
-        <span className="text-white font-bold text-2xl leading-tight">SOBRAL</span>
-        <span className="text-white italic text-lg pl-[14px]">SOLUÇÕES</span>
+        <span className="text-white font-bold text-3xl md:text-4xl leading-tight">SOBRAL</span>
+        <span className="text-white italic text-xl md:text-2xl pl-[14px]">SOLUÇÕES</span>
       </motion.div>
     </motion.div>
   );
