@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-blue-700 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0 text-center md:text-left">
-              <p>© 2025 Sobral Soluções Financeiras LTDA. Todos os direitos reservados.</p>
+              <p>© 2025 Sobral Crédito Seguro Ltda. Todos os direitos reservados.</p>
               <p className="mt-1">CNPJ: 24.963.609/0001-24</p>
             </div>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-center">

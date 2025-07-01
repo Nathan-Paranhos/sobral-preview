@@ -21,9 +21,11 @@ const Header: React.FC<HeaderProps> = () => {
       href: '#produtos',
       submenu: [
         { title: 'Fiança Digital', href: '#fianca-digital', icon: '🔐' },
+        { title: 'Seguro Digital Sobral', href: '#seguro-digital', icon: '🛡️' },
         { title: 'Seguro Incêndio', href: '#seguro-incendio', icon: '🔥' },
         { title: 'Título de Capitalização', href: '#titulo-capitalizacao', icon: '💰' },
-        { title: 'Seguro Fiança', href: '#seguro-fianca', icon: '🛡️' }
+        { title: 'Seguro Fiança', href: '#seguro-fianca', icon: '✅' },
+        { title: 'Seguro Auto e Moto', href: '#seguro-auto-moto', icon: '🚗' }
       ]
     },
     { title: 'Como Funciona', href: '#como-funciona' },
@@ -116,7 +118,7 @@ const Header: React.FC<HeaderProps> = () => {
             
             {/* Mobile Menu Button */}
             <button
-              onClick={() => { navigate('/'); setIsMenuOpen(false); }}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-300"
             >
               {isMenuOpen ? <X className="w-6 h-6 text-white" /> : <Menu className="w-6 h-6 text-white" />}
