@@ -240,11 +240,22 @@ const About: React.FC = () => {
                   <p className="text-white/80">+55 11 94226-4710</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3" style={{ flexWrap: 'wrap' }}>
+              <div className="flex items-center space-x-3" style={{ flexWrap: 'wrap', alignItems: 'flex-start' }}>
   <Mail className="w-6 h-6 text-accent-400 flex-shrink-0" />
   <div style={{ flex: '1 1 auto', minWidth: '0' }}>
     <p className="text-white font-medium">E-mail</p>
-    <p className="text-white/80 email-text">atendimento@sobralcreditoseguro.com.br</p>
+    <p 
+      className="text-white/80 email-text" 
+      style={{ 
+        wordBreak: 'break-all', 
+        overflowWrap: 'break-word', 
+        whiteSpace: 'normal', 
+        maxWidth: '100%', 
+        display: 'block' 
+      }}
+    >
+      atendimento@sobralcreditoseguro.com.br
+    </p>
   </div>
 </div>
               <div className="flex items-center space-x-3">
