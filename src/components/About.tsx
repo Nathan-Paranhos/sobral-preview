@@ -244,7 +244,7 @@ const About: React.FC = () => {
                 <Mail className="w-6 h-6 text-accent-400 flex-shrink-0" />
                 <div>
                   <p className="text-white font-medium">E-mail</p>
-                  <p className="text-white/80">atendimento@sobralcreditoseguro.com.br</p>
+                  <p className="text-white/80 email-text">atendimento@sobralcreditoseguro.com.br</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
