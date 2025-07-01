@@ -51,7 +51,6 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.3)_1px,transparent_0)] bg-[length:40px_40px]"></div>
       </div>
@@ -70,8 +69,6 @@ const Footer: React.FC = () => {
               Especialistas em garantias locatícias e seguros imobiliários. 
               Soluções digitais com a segurança que você precisa.
             </p>
-            
-            {/* Redes Sociais */}
             <div className="flex space-x-4 mb-8">
               {socialLinks.map((social, index) => (
                 <motion.button
@@ -86,8 +83,6 @@ const Footer: React.FC = () => {
                 </motion.button>
               ))}
             </div>
-
-            {/* WhatsApp Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -136,9 +131,8 @@ const Footer: React.FC = () => {
                   <div className="flex-1 min-w-0">
                     <button 
                       onClick={() => handleNavClick(info.href)}
-                      className={`text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm w-full ${
-                        info.icon === Mail ? 'overflow-wrap break-word word-break-break-all' : ''
-                      }`}
+                      className="text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm w-full break-words"
+                      style={info.icon === Mail ? { wordBreak: 'break-all', overflowWrap: 'break-word' } : {}}
                     >
                       {info.text}
                     </button>
@@ -149,7 +143,6 @@ const Footer: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Linha divisória */}
         <div className="border-t border-blue-700 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-blue-200 mb-4 md:mb-0 text-center md:text-left">
