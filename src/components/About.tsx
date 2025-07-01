@@ -119,9 +119,7 @@ const About: React.FC = () => {
                 whileHover={{ y: -8, scale: 1.02 }}
                 className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
               >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-accent-400 to-accent-500 flex items-center justify-center text-white text-2xl font-bold">
-                  {founder.name.split(' ').map(n => n[0]).join('')}
-                </div>
+                <img src={founder.image} alt={founder.name} className="w-40 h-40 mx-auto mb-6 rounded-full object-cover border-4 border-accent-400 shadow-lg" />
                 <h4 className="text-xl font-bold text-white mb-2">{founder.name}</h4>
                 <p className="text-accent-400 font-semibold mb-2">{founder.role}</p>
                 <p className="text-white/80 text-sm mb-4">{founder.experience}</p>
