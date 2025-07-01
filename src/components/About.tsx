@@ -240,13 +240,13 @@ const About: React.FC = () => {
                   <p className="text-white/80">+55 11 94226-4710</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-6 h-6 text-accent-400 flex-shrink-0" />
-                <div>
-                  <p className="text-white font-medium">E-mail</p>
-                  <p className="text-white/80 email-text">atendimento@sobralcreditoseguro.com.br</p>
-                </div>
-              </div>
+              <div className="flex items-center space-x-3" style={{ flexWrap: 'wrap' }}>
+  <Mail className="w-6 h-6 text-accent-400 flex-shrink-0" />
+  <div style={{ flex: '1 1 auto', minWidth: '0' }}>
+    <p className="text-white font-medium">E-mail</p>
+    <p className="text-white/80 email-text">atendimento@sobralcreditoseguro.com.br</p>
+  </div>
+</div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-6 h-6 text-accent-400 flex-shrink-0" />
                 <div>
