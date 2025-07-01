@@ -136,7 +136,9 @@ const Footer: React.FC = () => {
                   <div className="flex-1 min-w-0">
                     <button 
                       onClick={() => handleNavClick(info.href)}
-                      className="text-blue-100 hover:text-white transition-colors duration-300 break-words text-left text-sm w-full"
+                      className={`text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm w-full ${
+                        info.icon === Mail ? 'overflow-wrap break-word word-break-break-all' : ''
+                      }`}
                     >
                       {info.text}
                     </button>
