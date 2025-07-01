@@ -131,8 +131,7 @@ const Footer: React.FC = () => {
                   <div className="flex-1 min-w-0">
                     <button 
                       onClick={() => handleNavClick(info.href)}
-                      className="text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm w-full break-words"
-                      style={info.icon === Mail ? { wordBreak: 'break-all', overflowWrap: 'break-word' } : {}}
+                      className="text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm break-words contact-text"
                     >
                       {info.text}
                     </button>
@@ -163,6 +162,23 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Estilos CSS Inline */}
+      <style>
+        {`
+          .contact-text {
+            word-break: break-all !important;
+            overflow-wrap: break-word !important;
+            white-space: normal !important;
+            max-width: 100%;
+          }
+          @media (max-width: 640px) {
+            .contact-text {
+              font-size: 0.75rem; /* 12px */
+            }
+          }
+        `}
+      </style>
     </footer>
   );
 };
