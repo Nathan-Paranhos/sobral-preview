@@ -73,11 +73,11 @@ const About: React.FC = () => {
         >
           <div className="text-center mb-12">
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              A <strong className="text-accent-400">Sobral Soluções Financeiras</strong> é mais do que uma empresa de seguros — é um reflexo de valores enraizados em uma história de família. Fundada por <strong className="text-white">Adiel e Talita Sobral</strong>, uniram tradição, ética e humanidade para oferecer algo que o mercado anda esquecendo: respeito genuíno pelo cliente.
+              A <strong className="text-accent-400">Sobral Soluções Financeiras</strong> é mais do que uma empresa de seguros, é um reflexo de valores enraizados em uma história de família. Fundada por <strong className="text-white">Adiel e Talita Sobral</strong>, uniram tradição, ética e humanidade para oferecer algo que o mercado anda esquecendo: respeito genuíno pelo cliente.
             </p>
             
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              <strong className="text-white">Adiel</strong>, advogado com mais de 17 anos de experiência, e <strong className="text-white">Talita</strong>, administradora com o mesmo tempo de atuação no setor imobiliário, formam não só o coração da empresa, mas também uma história de vida construída com propósito. Estão juntos desde 2003 — desde os primeiros dias de faculdade, onde sonhavam em constituir uma família e seguir o propósito de servir com verdade e integridade.
+              <strong className="text-white">Adiel</strong>, advogado com mais de 17 anos de experiência, e <strong className="text-white">Talita</strong>, administradora com o mesmo tempo de atuação no setor imobiliário, formam não só o coração da empresa, mas também uma história de vida construída com propósito. Estão juntos desde 2003, desde os primeiros dias de faculdade, onde sonhavam em constituir uma família e seguir o propósito de servir com verdade e integridade.
             </p>
 
             <p className="text-lg text-white/80 mb-8 leading-relaxed">

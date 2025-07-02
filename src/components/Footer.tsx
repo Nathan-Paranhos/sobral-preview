@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
           >
             <Logo />
             <p className="text-blue-100 mt-6 mb-8 leading-relaxed text-lg">
-              Especialistas em garantias locatícias e seguros imobiliários. 
+              Especialistas em garantias locatícias e seguros imobiliários.
               Soluções digitais com a segurança que você precisa.
             </p>
             <div className="flex space-x-4 mb-8">
@@ -131,7 +131,7 @@ const Footer: React.FC = () => {
                   <div className="flex-1">
                     <button 
                       onClick={() => handleNavClick(info.href)}
-                      className="text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm break-words contact-text text-wrap w-full"
+                      className="text-blue-100 hover:text-white transition-colors duration-300 text-left text-sm break-words break-all w-full"
                     >
                       {info.text}
                     </button>
@@ -166,22 +166,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Estilos CSS Inline */}
-      <style>
-        {`
-          .contact-text {
-            word-break: break-all !important;
-            overflow-wrap: break-word !important;
-            white-space: normal !important;
-            max-width: 100%;
-          }
-          @media (max-width: 640px) {
-            .contact-text {
-              font-size: 0.75rem; /* 12px */
-            }
-          }
-        `}
-      </style>
+
     </footer>
   );
 };
