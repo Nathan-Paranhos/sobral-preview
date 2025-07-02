@@ -37,13 +37,28 @@ const Header: React.FC<HeaderProps> = () => {
     setIsMenuOpen(false);
     setActiveSubmenu(null);
 
-    if (location.pathname !== '/') {
-      navigate('/' + href);
-    } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    if (href.startsWith('#')) {
+      // If it's an anchor link
+      if (location.pathname !== '/') {
+        // If not on the home page, navigate to home and then scroll
+        navigate('/');
+        // Use a timeout to ensure navigation completes before scrolling
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100); // Small delay to allow navigation to complete
+      } else {
+        // If already on the home page, just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
       }
+    } else {
+      // If it's a regular route
+      navigate(href);
     }
   };
 
