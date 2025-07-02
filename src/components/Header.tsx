@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = () => {
         { title: 'Seguro Incêndio', href: '#seguro-incendio' },
         { title: 'Título de Capitalização', href: '#titulo-capitalizacao' },
         { title: 'Seguro Fiança', href: '#seguro-fianca' },
-        { title: 'Seguro Auto e Moto', href: '#seguro-auto-moto' }
+        { title: 'Seguros e Soluções Sob Medida', href: '#seguro-auto-moto' }
       ]
     },
     { title: 'Como Funciona', href: '#como-funciona' },
@@ -110,7 +110,7 @@ const Header: React.FC<HeaderProps> = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.open('https://wa.me/5511942264710?text=Olá! Gostaria de simular uma garantia locatícia.', '_blank')}
-              className="hidden md:flex bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all duration-300"
+              className="hidden sm:flex bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-2 px-4 sm:px-5 md:px-6 text-sm sm:text-base rounded-full shadow-lg transition-all duration-300"
             >
               Simular Agora
             </motion.button>
@@ -133,7 +133,7 @@ const Header: React.FC<HeaderProps> = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden mt-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 overflow-hidden"
+              className="lg:hidden mt-4 bg-white/10 backdrop-blur-md rounded-xl border border-white/20 overflow-hidden max-h-[80vh] overflow-y-auto"
             >
               <div className="py-4">
                 {menuItems.map((item, index) => (

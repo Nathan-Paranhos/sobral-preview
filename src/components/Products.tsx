@@ -1,6 +1,15 @@
-import type React from "react"
-import { motion } from "framer-motion"
-import { Flame, ShieldIcon as FileShield, CheckCircle, ArrowRight, Lock, Coins, ShieldCheck, Car } from "lucide-react"
+import type React from "react";
+import { motion } from "framer-motion";
+import {
+  Flame,
+  ShieldIcon as FileShield,
+  CheckCircle,
+  ArrowRight,
+  Lock,
+  Coins,
+  ShieldCheck,
+} from "lucide-react";
+import { LinkSimple } from "@phosphor-icons/react";
 
 const Products: React.FC = () => {
   const mainProducts = [
@@ -77,7 +86,7 @@ const Products: React.FC = () => {
       iconBg: "bg-green-600",
       modernIcon: Coins,
     },
-  ]
+  ];
 
   const centerProducts = [
     {
@@ -100,18 +109,27 @@ const Products: React.FC = () => {
     },
     {
       id: "seguro-auto-moto",
-      icon: Car,
-      title: "Seguro Auto e Moto",
-      subtitle: "Em breve, você poderá contratar diretamente conosco seguros completos para seu carro ou moto.",
-      description: "Cobertura personalizada, assistência 10h e toda a segurança que você merece. Fique ligado!",
-      features: ["Cobertura personalizada", "Assistência 10h", "Toda a segurança que você merece"],
-      idealFor: "Quem busca proteção completa para seu veículo",
+      icon: LinkSimple,
+      title: "Seguros e Soluções Sob Medida",
+      subtitle: "Novos tempos. Novas soluções.",
+      description:
+        "Em breve, lançaremos uma nova linha de seguros e soluções financeiras, desenvolvida em parceria com marcas reconhecidas no mercado.",
+      features: [
+        "Coberturas inteligentes para diferentes tipos de bens",
+        "Soluções personalizadas para proteger seu patrimônio com tranquilidade",
+        "Atendimento exclusivo e ágil",
+        "Benefícios diferenciados com parceiros estratégicos",
+        "Uma experiência premium, digital e descomplicada",
+      ],
+      idealFor:
+        "🔒 Tudo isso pensado para quem valoriza segurança, praticidade e confiança. Aguarde. O futuro da proteção está chegando.",
       color: "from-orange-600 to-orange-700",
       bgGradient: "from-orange-50 to-orange-100",
       iconBg: "bg-orange-600",
-      modernIcon: Car,
+      modernIcon: LinkSimple,
+      comingSoon: true,
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -153,28 +171,28 @@ const Products: React.FC = () => {
       className="group relative h-full"
     >
       <div className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-slate-100 h-full flex flex-col">
-        {/* Header com ícone moderno */}
-        <div className={`bg-gradient-to-br ${product.bgGradient} p-8 text-center relative overflow-hidden`}>
-          <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
+          {/* Header com ícone moderno */}
+          <div className={`bg-gradient-to-br ${product.bgGradient} p-4 sm:p-6 md:p-8 text-center relative overflow-hidden`}>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent"></div>
 
-          {/* Ícone principal moderno */}
-          <motion.div
-            className={`w-20 h-20 mx-auto mb-6 rounded-3xl ${product.iconBg} flex items-center justify-center shadow-xl relative z-10`}
-            whileHover={{ rotate: 360, scale: 1.1 }}
-            transition={{ duration: 0.6 }}
-          >
-            <product.modernIcon className="w-10 h-10 text-white" />
-          </motion.div>
+            {/* Ícone principal moderno */}
+            <motion.div
+              className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 mx-auto mb-4 sm:mb-5 md:mb-6 rounded-3xl ${product.iconBg} flex items-center justify-center shadow-xl relative z-10`}
+              whileHover={{ rotate: 360, scale: 1.1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <product.modernIcon className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 text-white" />
+            </motion.div>
 
-          <h3 className="text-2xl font-bold text-slate-800 mb-3 relative z-10">{product.title}</h3>
-          <p className="text-lg font-medium text-slate-600 mb-4 relative z-10">{product.subtitle}</p>
-          <p className="text-slate-600 leading-relaxed relative z-10 text-center">{product.description}</p>
+            <h3 className="text-xl sm:text-xl md:text-2xl font-bold text-slate-800 mb-2 sm:mb-3 relative z-10">{product.title}</h3>
+            <p className="text-base sm:text-base md:text-lg font-medium text-slate-600 mb-3 sm:mb-4 relative z-10">{product.subtitle}</p>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed relative z-10 text-center">{product.description}</p>
         </div>
 
         {/* Conteúdo */}
-        <div className="p-8 flex-1 flex flex-col">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col">
           {/* Features */}
-          <ul className="space-y-3 flex-1 mb-6">
+          <ul className="space-y-2 sm:space-y-3 flex-1 mb-4 sm:mb-5 md:mb-6">
             {product.features.map((feature: string, featureIndex: number) => (
               <motion.li
                 key={featureIndex}
@@ -206,17 +224,27 @@ const Products: React.FC = () => {
           </motion.div>
 
           {/* Botão */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() =>
-              window.open(`https://wa.me/5511942264710?text=Olá! Gostaria de contratar ${product.title}.`, "_blank")
-            }
-            className={`w-full bg-gradient-to-r ${product.color} text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 flex items-center justify-center space-x-2`}
-          >
-            <span>Solicitar Cotação</span>
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-          </motion.button>
+          {product.comingSoon ? (
+            <motion.button
+              disabled
+              className={`w-full bg-gradient-to-r from-gray-400 to-gray-500 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 opacity-70 cursor-not-allowed`}
+            >
+              <span>Em Breve</span>
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          ) : (
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() =>
+                window.open(`https://wa.me/5511942264710?text=Olá! Gostaria de contratar ${product.title}.`, "_blank")
+              }
+              className={`w-full bg-gradient-to-r ${product.color} text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 flex items-center justify-center space-x-2`}
+            >
+              <span>Solicitar Cotação</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+            </motion.button>
+          )}
         </div>
       </div>
       {/* Efeito de brilho no hover */}
@@ -243,7 +271,7 @@ const Products: React.FC = () => {
           className="text-center mb-20"
         >
           <motion.h2
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6"
             initial={{ scale: 0.9 }}
             whileInView={{ scale: 1 }}
             transition={{ duration: 0.6 }}
@@ -254,7 +282,7 @@ const Products: React.FC = () => {
             </span>
           </motion.h2>
           <motion.p
-            className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed px-2 sm:px-0"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -270,7 +298,7 @@ const Products: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 md:mb-16"
         >
           {mainProducts.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
@@ -285,7 +313,7 @@ const Products: React.FC = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="flex justify-center mb-16"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-4xl w-full">
             {centerProducts.map((product, index) => (
               <ProductCard key={product.id} product={product} index={index + 4} />
             ))}
@@ -301,13 +329,13 @@ const Products: React.FC = () => {
           className="text-center"
         >
           <motion.div
-            className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-12 shadow-2xl relative overflow-hidden"
+            className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl relative overflow-hidden"
             whileHover={{ scale: 1.02 }}
             transition={{ duration: 0.3 }}
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_70%)]"></div>
-            <h3 className="text-3xl font-bold text-white mb-4 relative z-10">Precisa de ajuda para escolher?</h3>
-            <p className="text-blue-100 mb-8 text-lg relative z-10">
+            <h3 className="text-2xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 relative z-10">Precisa de ajuda para escolher?</h3>
+            <p className="text-blue-100 mb-6 sm:mb-7 md:mb-8 text-base sm:text-lg relative z-10">
               Nossa equipe está pronta para encontrar a melhor solução para você
             </p>
             <motion.button
@@ -319,7 +347,7 @@ const Products: React.FC = () => {
                   "_blank",
                 )
               }
-              className="bg-white text-blue-700 font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative z-10"
+              className="bg-white text-blue-700 font-bold py-3 sm:py-3.5 md:py-4 px-6 sm:px-8 md:px-10 text-sm sm:text-base rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative z-10"
             >
               Falar com Especialista
             </motion.button>
