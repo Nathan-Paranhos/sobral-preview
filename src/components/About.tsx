@@ -35,15 +35,15 @@ const About: React.FC = () => {
     {
       name: 'Adiel Sobral',
       role: 'Advogado',
-      experience: '+ 17 anos de experiência',
-      description: '⁠Especialista em direito civil, processo civil e imobiliário.',
+      experience: '+17 anos de experiência',
+      description: 'Especialista em direito civil, processo civil e imobiliário.',
       image: '/adiel.jpg'
     },
     {
       name: 'Talita Sobral',
       role: 'Administradora',
-      experience: '+ 17 anos no setor imobiliário',
-      description: 'Especialista em gestão e relacionamento com clientes',
+      experience: '+17 anos no setor imobiliário',
+      description: 'Especialista em gestão e relacionamento com clientes.',
       image: '/talita.jpg'
     }
   ];
@@ -77,7 +77,7 @@ const About: React.FC = () => {
             </p>
             
             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-              <strong className="text-white">Adiel</strong>, advogado com mais de 17 anos de experiência, e <strong className="text-white">Talita</strong>, administradora com o mesmo tempo de atuação no setor imobiliário, formam não só o coração da empresa, mas também uma história de vida construída com propósito. Estão juntos desde de 2003 — desde os primeiros dias de faculdade, onde sonhavam em constituir uma família e seguir o propósito de servir com verdade e integridade.
+              <strong className="text-white">Adiel</strong>, advogado com mais de 17 anos de experiência, e <strong className="text-white">Talita</strong>, administradora com o mesmo tempo de atuação no setor imobiliário, formam não só o coração da empresa, mas também uma história de vida construída com propósito. Estão juntos desde 2003 — desde os primeiros dias de faculdade, onde sonhavam em constituir uma família e seguir o propósito de servir com verdade e integridade.
             </p>
 
             <p className="text-lg text-white/80 mb-8 leading-relaxed">

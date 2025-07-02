@@ -161,6 +161,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="text-center text-blue-200 mt-8 text-xl font-bold">
+          <p>Novos produtos em breve!</p>
+        </div>
       </div>
 
       {/* Estilos CSS Inline */}

@@ -20,12 +20,12 @@ const Header: React.FC<HeaderProps> = () => {
       title: 'Produtos',
       href: '#produtos',
       submenu: [
-        { title: 'Fiança Digital', href: '#fianca-digital', icon: '🔐' },
-        { title: 'Seguro Digital Sobral', href: '#seguro-digital', icon: '🛡️' },
-        { title: 'Seguro Incêndio', href: '#seguro-incendio', icon: '🔥' },
-        { title: 'Título de Capitalização', href: '#titulo-capitalizacao', icon: '💰' },
-        { title: 'Seguro Fiança', href: '#seguro-fianca', icon: '✅' },
-        { title: 'Seguro Auto e Moto', href: '#seguro-auto-moto', icon: '🚗' }
+        { title: 'Fiança Digital', href: '#fianca-digital' },
+        { title: 'Seguro Digital Sobral', href: '#seguro-digital' },
+        { title: 'Seguro Incêndio', href: '#seguro-incendio' },
+        { title: 'Título de Capitalização', href: '#titulo-capitalizacao' },
+        { title: 'Seguro Fiança', href: '#seguro-fianca' },
+        { title: 'Seguro Auto e Moto', href: '#seguro-auto-moto' }
       ]
     },
     { title: 'Como Funciona', href: '#como-funciona' },
@@ -92,9 +92,8 @@ const Header: React.FC<HeaderProps> = () => {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.2, delay: index * 0.05 }}
-                          className="w-full flex items-center space-x-3 px-4 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200 text-left"
+                          className="w-full block px-4 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors duration-200 text-left"
                         >
-                          <span className="text-xl">{subItem.icon}</span>
                           <span className="font-medium">{subItem.title}</span>
                         </motion.button>
                       ))}
@@ -156,9 +155,8 @@ const Header: React.FC<HeaderProps> = () => {
                           <button
                             key={subItem.title}
                             onClick={() => handleNavClick(subItem.href)}
-                            className="w-full text-left flex items-center space-x-2 px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200"
+                            className="w-full text-left block px-4 py-2 text-blue-200 hover:text-white transition-colors duration-200"
                           >
-                            <span>{subItem.icon}</span>
                             <span>{subItem.title}</span>
                           </button>
                         ))}
